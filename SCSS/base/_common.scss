@@ -1,0 +1,31 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "DM Sans", sans-serif;
+    background: #fff;
+}
+
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
