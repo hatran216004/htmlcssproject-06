@@ -1,0 +1,91 @@
+@use "../base";
+
+.question {
+    padding: 30px 0;
+    margin-top: 65px;
+    &__container {
+        padding: 0;
+    }
+    &__list {
+        width: 1010px;
+        margin-top: 80px;
+    }
+    &-item {
+        &__input:checked ~ &__label {
+            border-color: base.$primary-color;
+        }
+        &__input:checked ~ &__label &__heading {
+            color: base.$primary-color;
+        }
+        &__input:checked ~ &__label &__answer {
+            height: 60px;
+            opacity: 1;
+            visibility: visible;
+        }
+        &__input:checked ~ &__label &__circle {
+            border-color: rgba($color: base.$primary-color, $alpha: 0.2);
+        }
+        &__input:checked ~ &__label &__circle {
+            &--icon {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        &__input:checked ~ &__label &__circle {
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        &__label {
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 21px;
+            border-bottom: 2px solid #08182f;
+            transition: border-color 0.3s;
+        }
+        &__heading {
+            color: #080415;
+            font-size: 3.2rem;
+            font-weight: 500;
+            line-height: 4rem;
+            letter-spacing: -0.128rem;
+            user-select: none;
+            transition: color 0.3s;
+        }
+        &__answer {
+            width: 487px;
+            margin-top: 23px;
+            color: #51586a;
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 3rem;
+            animation: move linear 0.3s;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: height 0.3s, visibility 0.3s, opacity 0.2s;
+            user-select: none;
+        }
+        &__circle {
+            user-select: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid rgba($color: #161a1c, $alpha: 0.2);
+            position: relative;
+            @include base.flex-center;
+            transition: border-color 0.3s;
+
+            &::after {
+                content: url(../../assets/icons/icon-mimus.svg);
+                padding-top: 3px;
+                position: absolute;
+                opacity: 1;
+                visibility: hidden;
+            }
+        }
+    }
+}

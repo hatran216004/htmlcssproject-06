@@ -210,6 +210,16 @@ a {
   line-height: 3rem;
 }
 
+@keyframes move {
+  0% {
+    opacity: 0;
+    translate: 0 -60px;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -1627,6 +1637,91 @@ a {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.question {
+  padding: 30px 0;
+  margin-top: 65px;
+}
+.question__container {
+  padding: 0;
+}
+.question__list {
+  width: 1010px;
+  margin-top: 80px;
+}
+.question-item__input:checked ~ .question-item__label {
+  border-color: #5d3bee;
+}
+.question-item__input:checked ~ .question-item__label .question-item__heading {
+  color: #5d3bee;
+}
+.question-item__input:checked ~ .question-item__label .question-item__answer {
+  height: 60px;
+  opacity: 1;
+  visibility: visible;
+}
+.question-item__input:checked ~ .question-item__label .question-item__circle {
+  border-color: rgba(93, 59, 238, 0.2);
+}
+.question-item__input:checked ~ .question-item__label .question-item__circle--icon {
+  opacity: 0;
+  visibility: hidden;
+}
+.question-item__input:checked ~ .question-item__label .question-item__circle::after {
+  opacity: 1;
+  visibility: visible;
+}
+.question-item__label {
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 21px;
+  border-bottom: 2px solid #08182f;
+  transition: border-color 0.3s;
+}
+.question-item__heading {
+  color: #080415;
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 4rem;
+  letter-spacing: -0.128rem;
+  user-select: none;
+  transition: color 0.3s;
+}
+.question-item__answer {
+  width: 487px;
+  margin-top: 23px;
+  color: #51586a;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+  animation: move linear 0.3s;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: height 0.3s, visibility 0.3s, opacity 0.2s;
+  user-select: none;
+}
+.question-item__circle {
+  user-select: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(22, 26, 28, 0.2);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s;
+}
+.question-item__circle::after {
+  content: url(../../assets/icons/icon-mimus.svg);
+  padding-top: 3px;
+  position: absolute;
+  opacity: 1;
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */
