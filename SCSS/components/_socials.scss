@@ -1,0 +1,39 @@
+@use "../base";
+
+.socials {
+    margin-top: 98px;
+    &__container {
+        padding: 0;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__heading {
+        position: relative;
+        margin-left: 100px;
+        width: 253px;
+        color: #080415;
+        font-size: 4.2rem;
+        font-weight: 500;
+        line-height: 5rem;
+        letter-spacing: -0.168rem;
+
+        &::before {
+            content: "";
+            margin-right: 13px;
+            width: 86px;
+            height: 2px;
+            background-color: base.$primary-color;
+            position: absolute;
+            top: 22px;
+            left: -100px;
+        }
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 36px;
+    }
+}

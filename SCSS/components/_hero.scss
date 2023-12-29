@@ -78,7 +78,6 @@
     &::after {
         content: url(../../assets/img/hero-decorate-02.svg);
         position: absolute;
-        bottom: 0;
-        right: 0;
+        @include base.position(bottom-right);
     }
 }
