@@ -10,6 +10,7 @@
     &-media {
         position: relative;
         &__img {
+            user-select: none;
             width: 514px;
             display: block;
             object-fit: cover;

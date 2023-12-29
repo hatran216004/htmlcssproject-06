@@ -166,10 +166,11 @@ a {
   text-decoration: none;
 }
 
-.hero__btn {
+.project__btn, .hero__btn {
   --height: 62px;
   border: none;
   outline: none;
+  padding: 0;
   background-color: transparent;
   min-width: 170px;
   height: var(--height);
@@ -180,7 +181,7 @@ a {
   line-height: 3rem;
   transition: opacity 0.3s;
 }
-.hero__btn:hover {
+.project__btn:hover, .hero__btn:hover {
   cursor: pointer;
   opacity: 0.9;
 }
@@ -1162,6 +1163,7 @@ a {
   position: relative;
 }
 .hero-media__img {
+  user-select: none;
   width: 514px;
   display: block;
   object-fit: cover;
@@ -1334,6 +1336,89 @@ a {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 3rem;
+}
+
+.project {
+  padding: 86px 0;
+  margin-top: 110px;
+  background-color: #5d3bee;
+}
+.project__container {
+  padding: 0;
+}
+.project__top {
+  display: flex;
+  align-items: center;
+  column-gap: 160px;
+}
+.project__heading {
+  color: #fff;
+  width: 468px;
+}
+.project__desc {
+  width: 370px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+.project__list {
+  margin-top: 70px;
+}
+.project-item {
+  padding: 23px;
+  background: #fbfaff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transition: translate 0.25s;
+}
+.project-item:hover {
+  cursor: pointer;
+  translate: 0 -16px;
+}
+.project-item__decor {
+  display: block;
+  position: absolute;
+  top: 1px;
+  right: 0;
+}
+.project-item__title {
+  color: #080415;
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 4rem;
+  letter-spacing: -0.128rem;
+}
+.project-item__desc {
+  margin-top: 10px;
+  width: 220px;
+  color: #51586a;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.3rem;
+}
+.project-item__more {
+  margin-top: 20px;
+  color: #080415;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 3rem;
+  text-decoration-line: underline;
+}
+.project-item__img {
+  position: relative;
+  z-index: 1;
+}
+.project__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+.project__btn {
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

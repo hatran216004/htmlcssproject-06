@@ -27,3 +27,23 @@
         translate: -50% -50%;
     }
 }
+
+@mixin pos-top-left($top, $left) {
+    top: $top;
+    left: $left;
+}
+
+@mixin pos-top-right($top, $right) {
+    top: $top;
+    right: $right;
+}
+
+@mixin pos-bottom-left($bottom, $left) {
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin pos-bottom-right($bottom, $right) {
+    bottom: $bottom;
+    right: $right;
+}

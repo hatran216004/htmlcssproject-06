@@ -1,1 +1,83 @@
 @use "../base";
+
+.project {
+    padding: 86px 0;
+    margin-top: 110px;
+    background-color: base.$primary-color;
+    &__container {
+        padding: 0;
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        column-gap: 160px;
+    }
+    &__heading {
+        color: #fff;
+        width: 468px;
+    }
+    &__desc {
+        width: 370px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 3rem;
+    }
+    &__list {
+        margin-top: 70px;
+    }
+    &-item {
+        padding: 23px;
+        background: #fbfaff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        transition: translate 0.25s;
+        &:hover {
+            cursor: pointer;
+            translate: 0 -16px;
+        }
+
+        &__decor {
+            display: block;
+            position: absolute;
+            @include base.pos-top-right(1px, 0);
+        }
+        &__title {
+            color: #080415;
+            font-size: 3.2rem;
+            font-weight: 500;
+            line-height: 4rem;
+            letter-spacing: -0.128rem;
+        }
+        &__desc {
+            margin-top: 10px;
+            width: 220px;
+            color: #51586a;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.3rem;
+        }
+        &__more {
+            margin-top: 20px;
+            color: #080415;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 3rem;
+            text-decoration-line: underline;
+        }
+        &__img {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    &__cta {
+        @include base.flex-center;
+        margin-top: 80px;
+    }
+    &__btn {
+        @extend %btn;
+        background-color: #fff;
+    }
+}
