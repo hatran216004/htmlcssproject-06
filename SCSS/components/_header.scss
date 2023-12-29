@@ -10,16 +10,15 @@
 .fixed {
     position: sticky;
     top: -12px;
-    z-index: 9;
+    z-index: 10;
 }
 
 .header {
-    padding: 20px 0 8px;
-
+    padding-top: 20px;
+    background-color: #fbfaff;
     &__inner {
         display: flex;
         align-items: center;
-        justify-content: space-between;
     }
 
     &__contact {
@@ -35,6 +34,7 @@
         }
     }
     &__link {
+        margin-right: 357px;
         color: #080415;
         font-size: 2.2rem;
         font-weight: 500;
@@ -47,6 +47,7 @@
 }
 
 .navbar {
+    margin-left: auto;
     &__list {
         display: flex;
         align-items: center;

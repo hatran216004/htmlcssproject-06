@@ -1,3 +1,5 @@
+@use "./variables";
+
 *,
 ::before,
 ::after {
@@ -24,8 +26,56 @@ textarea,
 select,
 button {
     font-family: inherit;
+    font-size: inherit;
 }
 
 a {
     text-decoration: none;
+}
+
+%btn {
+    --height: 62px;
+
+    border: none;
+    outline: none;
+    background-color: transparent;
+    min-width: 170px;
+    height: var(--height);
+    line-height: var(--height);
+    background-color: variables.$primary-color;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 3rem;
+    transition: opacity 0.3s;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+    }
+}
+
+.section {
+    &__heading {
+        user-select: none;
+        color: #080415;
+        font-size: 4.2rem;
+        font-weight: 500;
+        line-height: 5rem;
+        letter-spacing: -0.168rem;
+        &--top {
+            user-select: none;
+            margin-bottom: 20px;
+            color: #080415;
+            font-size: 8rem;
+            font-weight: 500;
+            line-height: 7.6rem;
+            letter-spacing: -0.32rem;
+        }
+    }
+    &__desc {
+        color: #51586a;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 3rem;
+    }
 }
