@@ -1,0 +1,202 @@
+@use "../base";
+
+.inter {
+    padding: 140px 0 74px;
+    background: linear-gradient(to bottom, #fff 47%, #fbfaff 42%);
+    position: relative;
+    &__container {
+        padding: 0;
+    }
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title {
+        margin-bottom: 10px;
+        color: #5d3bee;
+        font-size: 3.2rem;
+        font-weight: 500;
+        line-height: 4rem;
+        letter-spacing: -0.128rem;
+        @include base.flex-center;
+
+        &::after {
+            content: url(../../assets/icons/hand-icon.svg);
+            margin-left: 9px;
+        }
+    }
+    &__desc {
+        margin-top: 15px;
+        width: 570px;
+        text-align: center;
+    }
+    &__data {
+        border-top: 1px solid rgba($color: #080415, $alpha: 0.2);
+        border-bottom: 1px solid rgba($color: #080415, $alpha: 0.2);
+        display: flex;
+        justify-content: space-between;
+        margin: 70px auto;
+        padding: 20px 95px;
+        width: 946px;
+        max-width: 100%;
+    }
+    &-item {
+        &__number {
+            color: #080415;
+            font-size: 5.6rem;
+            font-weight: 500;
+            line-height: 7.6rem;
+            letter-spacing: 0.168rem;
+            text-decoration-line: underline;
+        }
+        &__text {
+            color: #51586a;
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 3rem;
+        }
+    }
+    &__media {
+        position: relative;
+        margin-bottom: 150px;
+        &--video {
+            width: 100%;
+            height: 628px;
+            object-fit: cover;
+        }
+        &--play {
+            width: 111px;
+            height: 111px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            @include base.flex-center;
+            @include base.position(center);
+            position: absolute;
+            z-index: 10;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &--intro {
+            width: 170px;
+            height: 62px;
+            text-align: center;
+            background: #fff;
+            color: #51586a;
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 62px;
+            text-transform: uppercase;
+            position: absolute;
+            @include base.pos-bottom-right(10px, 10px);
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--desc {
+            width: 570px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        &--list {
+            width: 100%;
+            margin-top: 60px;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+        }
+        &--item {
+            width: 100%;
+            flex-shrink: 0;
+        }
+        &--quote {
+            margin: 0 auto;
+            width: 679px;
+            color: #51586a;
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: 400;
+            line-height: 4rem;
+        }
+        &--info {
+            margin-top: 36px;
+            @include base.flex-center;
+        }
+        &--avatar {
+            margin-right: 15px;
+            width: 40px;
+            height: 40px;
+            padding-top: 7px;
+            border-radius: 50%;
+            background-color: #f29764;
+            @include base.flex-center;
+            overflow: hidden;
+        }
+        &--user {
+            display: block;
+        }
+        &--name {
+            color: #080415;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 4rem;
+        }
+        &--job {
+            color: #51586a;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.9rem;
+        }
+        &--dots {
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            column-gap: 16px;
+        }
+        &--dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: rgba($color: #080415, $alpha: 0.2);
+
+            &:hover {
+                cursor: pointer;
+            }
+            &-active {
+                width: 20px;
+                height: 20px;
+                background: transparent;
+                @include base.flex-center;
+                border: 1px solid base.$primary-color;
+                &::before {
+                    content: "";
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background: base.$primary-color;
+                }
+            }
+        }
+    }
+    &__decor {
+        &:nth-child(1) {
+            position: absolute;
+            @include base.pos-bottom-left(0, 0);
+        }
+        &:nth-child(2) {
+            position: absolute;
+            @include base.pos-bottom-right(0, 0);
+        }
+    }
+}
