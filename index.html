@@ -98,7 +98,23 @@
                 <div class="header__inner">
                     <div class="header__contact">
                         <a href="#!" class="header__contact--icon">
-                            <img src="./assets/icons/letter.svg" alt="letter" />
+                            <img
+                                class="hide-on-mobile"
+                                src="./assets/icons/letter.svg"
+                                alt="letter"
+                            />
+                            <img
+                                class="hide-on-pc"
+                                src="./assets/icons/letter-mobile.svg"
+                                alt=""
+                            />
+                        </a>
+                        <!-- Mobile menu -->
+                        <a href="#!" class="header__contact--menu hide-on-pc">
+                            <img
+                                src="./assets/icons/menu-icon.svg"
+                                alt="Menu"
+                            />
                         </a>
                         <a
                             href="mailto:hi@arif.interactive"
@@ -108,7 +124,16 @@
                         </a>
                     </div>
                     <a href="#" class="header__logo">
-                        <img src="./assets/img/logo.svg" alt="Logo" />
+                        <img
+                            class="hide-on-mobile"
+                            src="./assets/img/logo.svg"
+                            alt="Logo"
+                        />
+                        <img
+                            class="hide-on-pc"
+                            src="./assets/img/mobile-logo.svg"
+                            alt=""
+                        />
                     </a>
                     <nav class="navbar">
                         <ul class="navbar__list">
@@ -142,7 +167,7 @@
             <section class="hero">
                 <div class="container">
                     <div class="row hero__inner">
-                        <div class="col-lg-6">
+                        <div class="col-12 col-lg-6 hero-media__mobile">
                             <figure class="hero-media">
                                 <img
                                     src="./assets/img/hero-img.png"
@@ -151,9 +176,13 @@
                                 />
                             </figure>
                         </div>
-                        <div class="col-lg-5 offset-lg-1">
+                        <div
+                            class="col-12 col-lg-5 offset-lg-1 hero-content__mobile"
+                        >
                             <section class="hero-content">
-                                <h1 class="section__heading--top">
+                                <h1
+                                    class="section__heading--top hero__heading--mobile"
+                                >
                                     An Interactive Designer
                                 </h1>
                                 <p class="section__desc hero-content__desc">
@@ -327,6 +356,14 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Dots on mobile -->
+                    <div class="inter__bottom--dots hide-on-pc features__dots">
+                        <div class="inter__bottom--dot"></div>
+                        <div
+                            class="inter__bottom--dot inter__bottom--dot-active"
+                        ></div>
+                        <div class="inter__bottom--dot"></div>
+                    </div>
                 </div>
             </section>
             <!-- Projects -->
@@ -334,7 +371,8 @@
                 <div class="container project__container">
                     <section class="project__top">
                         <h2 class="section__heading project__heading">
-                            Take a look at my recent projects
+                            Take a look at<br />
+                            my recent projects
                         </h2>
                         <p class="section__desc project__desc">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -342,7 +380,9 @@
                             turpis.
                         </p>
                     </section>
-                    <div class="row row-cols-2 gy-lg-3 project__list">
+                    <div
+                        class="row row-cols-lg-2 gy-lg-3 row-cols-1 gy-2 project__list"
+                    >
                         <div class="col">
                             <!-- Item 1 -->
                             <article class="project-item">
@@ -365,7 +405,17 @@
                                     <img
                                         src="./assets/img/project-img-decorate.svg"
                                         alt=""
-                                        class="project-item__decor"
+                                        class="project-item__decor hide-on-mobile"
+                                    />
+                                    <img
+                                        src="./assets/img/project-decorate-mobile-01.svg"
+                                        alt=""
+                                        class="project-item__decor--mobile hide-on-pc"
+                                    />
+                                    <img
+                                        src="./assets/img/project-decorate-mobile-02.svg"
+                                        alt=""
+                                        class="project-item__decor--mobile hide-on-pc"
                                     />
                                 </figure>
                             </article>
@@ -392,7 +442,17 @@
                                     <img
                                         src="./assets/img/project-img-decorate.svg"
                                         alt=""
-                                        class="project-item__decor"
+                                        class="project-item__decor hide-on-mobile"
+                                    />
+                                    <img
+                                        src="./assets/img/project-decorate-mobile-01.svg"
+                                        alt=""
+                                        class="project-item__decor--mobile hide-on-pc"
+                                    />
+                                    <img
+                                        src="./assets/img/project-decorate-mobile-02.svg"
+                                        alt=""
+                                        class="project-item__decor--mobile hide-on-pc"
                                     />
                                 </figure>
                             </article>
@@ -417,7 +477,17 @@
                                     <img
                                         src="./assets/img/project-img-decorate.svg"
                                         alt=""
-                                        class="project-item__decor"
+                                        class="project-item__decor hide-on-mobile"
+                                    />
+                                    <img
+                                        src="./assets/img/project-decorate-mobile-01.svg"
+                                        alt=""
+                                        class="project-item__decor--mobile hide-on-pc"
+                                    />
+                                    <img
+                                        src="./assets/img/project-decorate-mobile-02.svg"
+                                        alt=""
+                                        class="project-item__decor--mobile hide-on-pc"
                                     />
                                 </figure>
                             </article>
@@ -444,7 +514,17 @@
                                     <img
                                         src="./assets/img/project-img-decorate.svg"
                                         alt=""
-                                        class="project-item__decor"
+                                        class="project-item__decor hide-on-mobile"
+                                    />
+                                    <img
+                                        src="./assets/img/project-decorate-mobile-01.svg"
+                                        alt=""
+                                        class="project-item__decor--mobile hide-on-pc"
+                                    />
+                                    <img
+                                        src="./assets/img/project-decorate-mobile-02.svg"
+                                        alt=""
+                                        class="project-item__decor--mobile hide-on-pc"
                                     />
                                 </figure>
                             </article>
@@ -460,7 +540,9 @@
                 <div class="container inter__container">
                     <section class="inter__top">
                         <p class="inter__title">Hey,,,,It’s Arif</p>
-                        <h2 class="section__heading">Interactive Designer</h2>
+                        <h2 class="section__heading inter__heading">
+                            Interactive Designer
+                        </h2>
                         <p class="section__desc inter__desc">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. In urna, non nisl tincidunt ut elementum
