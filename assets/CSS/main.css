@@ -166,7 +166,7 @@ a {
   text-decoration: none;
 }
 
-.project__btn, .hero__btn {
+.banner__btn, .project__btn, .hero__btn {
   --height: 62px;
   border: none;
   outline: none;
@@ -181,7 +181,7 @@ a {
   line-height: 3rem;
   transition: opacity 0.3s;
 }
-.project__btn:hover, .hero__btn:hover {
+.banner__btn:hover, .project__btn:hover, .hero__btn:hover {
   cursor: pointer;
   opacity: 0.9;
 }
@@ -204,22 +204,14 @@ a {
   letter-spacing: -0.32rem;
 }
 .section__desc {
+  margin-top: 20px;
+  text-align: center;
   color: #51586a;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 3rem;
 }
 
-@keyframes move {
-  0% {
-    opacity: 0;
-    translate: 0 -60px;
-  }
-  100% {
-    opacity: 1;
-    translate: 0 0;
-  }
-}
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -1697,7 +1689,6 @@ a {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 3rem;
-  animation: move linear 0.3s;
   height: 0;
   opacity: 0;
   visibility: hidden;
@@ -1715,6 +1706,12 @@ a {
   align-items: center;
   justify-content: center;
   transition: border-color 0.3s;
+}
+.question-item__circle:hover {
+  cursor: pointer;
+}
+.question-item__circle--icon:hover {
+  opacity: 0.8;
 }
 .question-item__circle::after {
   content: url(../../assets/icons/icon-mimus.svg);
@@ -1757,6 +1754,50 @@ a {
   width: 100%;
   height: 529px;
   object-fit: cover;
+}
+
+.banner {
+  margin-top: 80px;
+}
+.banner__container {
+  padding: 0;
+}
+.banner__inner {
+  padding: 68px 0;
+  background: #fbfaff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner__icon {
+  margin-bottom: 20px;
+}
+.banner__desc {
+  margin-top: 15px;
+  width: 570px;
+}
+.banner__btn {
+  margin-top: 39px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+.banner__decor {
+  position: absolute;
+}
+.banner__decor:nth-child(1) {
+  bottom: 0;
+  left: 0;
+}
+.banner__decor:nth-child(2) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-46.6%);
+}
+.banner__decor:nth-child(3) {
+  top: 0;
+  right: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

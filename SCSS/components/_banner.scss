@@ -1,0 +1,43 @@
+@use "../base";
+
+.banner {
+    margin-top: 80px;
+    &__container {
+        padding: 0;
+    }
+    &__inner {
+        padding: 68px 0;
+        background: #fbfaff;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__icon {
+        margin-bottom: 20px;
+    }
+    &__desc {
+        margin-top: 15px;
+        width: 570px;
+    }
+    &__btn {
+        @extend %btn;
+        margin-top: 39px;
+        position: relative;
+        z-index: 1;
+        color: #fff;
+    }
+    &__decor {
+        position: absolute;
+        &:nth-child(1) {
+            @include base.position(bottom-left);
+        }
+        &:nth-child(2) {
+            @include base.pos-top-left(0, 50%);
+            transform: translateX(-46.6%);
+        }
+        &:nth-child(3) {
+            @include base.position(top-right);
+        }
+    }
+}

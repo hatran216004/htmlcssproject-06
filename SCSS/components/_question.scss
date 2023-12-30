@@ -62,7 +62,6 @@
             font-size: 1.8rem;
             font-weight: 400;
             line-height: 3rem;
-            animation: move linear 0.3s;
             height: 0;
             opacity: 0;
             visibility: hidden;
@@ -79,6 +78,12 @@
             @include base.flex-center;
             transition: border-color 0.3s;
 
+            &:hover {
+                cursor: pointer;
+            }
+            &--icon:hover {
+                opacity: 0.8;
+            }
             &::after {
                 content: url(../../assets/icons/icon-mimus.svg);
                 padding-top: 3px;
