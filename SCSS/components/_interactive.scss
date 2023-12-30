@@ -117,6 +117,9 @@
         &--item {
             width: 100%;
             flex-shrink: 0;
+            animation: forward ease-in-out;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
         }
         &--quote {
             margin: 0 auto;

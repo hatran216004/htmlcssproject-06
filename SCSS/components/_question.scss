@@ -54,6 +54,9 @@
             letter-spacing: -0.128rem;
             user-select: none;
             transition: color 0.3s;
+            &:hover {
+                cursor: pointer;
+            }
         }
         &__answer {
             width: 487px;

@@ -1,0 +1,49 @@
+@use "../base";
+
+.footer {
+    margin: 50px 0 0;
+
+    &__container {
+        padding-bottom: 32px;
+    }
+    &__bottom {
+        border-top: 1px solid rgba($color: #0c0720, $alpha: 0.2);
+        width: 1430px;
+        max-width: calc(100% - 48px);
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        padding: 18px 0 30px;
+        column-gap: 515px;
+    }
+    &__copyright-left,
+    &__copyright-text {
+        color: rgba($color: #525771, $alpha: 0.6);
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 3rem;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+    &__copyright-text {
+        padding: 0 0 0 18px;
+        @include base.flex-center;
+        &:nth-child(1) {
+            &::after {
+                content: "";
+                width: 1px;
+                height: 14px;
+                background-color: rgba($color: #525771, $alpha: 0.6);
+                margin-left: 23px;
+            }
+        }
+    }
+
+    &__copyright-right {
+        display: flex;
+    }
+}

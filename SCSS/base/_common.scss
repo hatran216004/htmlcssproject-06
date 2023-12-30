@@ -75,10 +75,27 @@ a {
     }
     &__desc {
         margin-top: 20px;
-        text-align: center;
         color: #51586a;
         font-size: 1.8rem;
         font-weight: 400;
         line-height: 3rem;
+    }
+}
+
+@keyframes envelop-scale {
+    0% {
+        transform: scale(0.75, 0.75);
+    }
+    30% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes forward {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
     }
 }

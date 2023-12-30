@@ -47,3 +47,47 @@
     bottom: $bottom;
     right: $right;
 }
+
+// animation
+@mixin animate-forward {
+    animation: forward ease-in-out;
+    animation-duration: 4s;
+    animation-delay: 7s;
+    animation-iteration-count: infinite;
+}
+
+@mixin time-delay($time: --time, $plus: --plus) {
+    --time: calc(#{$time} + $plus);
+}
+
+// mixin for responsive
+@mixin screen($divices) {
+    @if &divices == pc {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+
+    @if &divices == tablet&mobile {
+        @media (max-width: 991.98px) {
+            @content;
+        }
+    }
+
+    @if &divices == tablet {
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            @content;
+        }
+    }
+
+    @if &divices == mobile {
+        @media screen and (max-width: 767.98px) {
+            @content;
+        }
+    }
+    @if &divices == mobile-s {
+        @media (max-width: 575.98px) {
+            @content;
+        }
+    }
+}
