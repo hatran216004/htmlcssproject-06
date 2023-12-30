@@ -1,0 +1,40 @@
+@use "../base";
+
+.blog {
+    margin-top: 100px;
+    padding: 60px 0;
+
+    &__container {
+        padding: 0;
+    }
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__desc {
+        margin: 20px 0 30px;
+        width: 528px;
+        text-align: center;
+    }
+    &__sub-title {
+        margin-bottom: 70px;
+        color: base.$primary-color;
+        font-size: 3.2rem;
+        font-weight: 500;
+        line-height: 4rem;
+        letter-spacing: -0.128rem;
+        text-decoration-line: underline;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+    &-item {
+        &__img {
+            width: 100%;
+            height: 529px;
+            object-fit: cover;
+        }
+    }
+}
