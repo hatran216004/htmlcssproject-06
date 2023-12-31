@@ -109,20 +109,23 @@
                                 alt=""
                             />
                         </a>
-                        <!-- Mobile menu -->
-                        <a href="#!" class="header__contact--menu hide-on-pc">
+                        <label
+                            for="menu-checkbox"
+                            class="header__contact--menu hide-on-pc"
+                        >
                             <img
                                 src="./assets/icons/menu-icon.svg"
                                 alt="Menu"
                             />
-                        </a>
+                        </label>
                         <a
                             href="mailto:hi@arif.interactive"
-                            class="header__link"
+                            class="header__link hide-on-mobile"
                         >
                             hi@arif.interactive
                         </a>
                     </div>
+                    <!-- Logo -->
                     <a href="#" class="header__logo">
                         <img
                             class="hide-on-mobile"
@@ -135,7 +138,8 @@
                             alt=""
                         />
                     </a>
-                    <nav class="navbar">
+                    <!-- Navbar -->
+                    <nav class="navbar hide-on-mobile">
                         <ul class="navbar__list">
                             <li class="navbar__item">
                                 <a href="#projects" class="navbar__item--link">
@@ -162,6 +166,44 @@
                 </div>
             </div>
         </header>
+        <!-- Tablet mobile header -->
+        <header class="mobile-header hide-on-pc">
+            <input
+                type="checkbox"
+                id="menu-checkbox"
+                class="menu-checkbox"
+                hidden
+            />
+            <!-- Overlay -->
+            <label for="menu-checkbox" class="menu-overlay"></label>
+            <!-- Menu drawer -->
+            <div class="menu-drawer">
+                <nav class="navbar">
+                    <ul class="navbar__list">
+                        <li class="navbar__item">
+                            <a href="#projects" class="navbar__item--link">
+                                Projects
+                            </a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#journey" class="navbar__item--link">
+                                Journey
+                            </a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#service" class="navbar__item--link">
+                                Service
+                            </a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#contact" class="navbar__item--link">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <main>
             <!-- Hero -->
             <section class="hero">
@@ -173,6 +215,11 @@
                                     src="./assets/img/hero-img.png"
                                     alt="An Interactive Designer"
                                     class="hero-media__img"
+                                />
+                                <img
+                                    src="./assets/img/hero-decorate-mobile.svg"
+                                    alt="An Interactive Designer"
+                                    class="hero-media__decor-mobile hide-on-pc"
                                 />
                             </figure>
                         </div>
@@ -300,8 +347,8 @@
                             turpis.
                         </p>
                     </section>
-                    <div class="row features__list">
-                        <div class="col-lg-4">
+                    <div class="row row-cols-lg-3 gx-0 gx-lg-3 features__list">
+                        <div class="col">
                             <div class="features-item">
                                 <figure class="features-item__img">
                                     <img
@@ -319,7 +366,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col">
                             <div class="features-item">
                                 <figure class="features-item__img">
                                     <img
@@ -337,7 +384,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col">
                             <div class="features-item">
                                 <figure class="features-item__img">
                                     <img
@@ -569,7 +616,13 @@
                             muted
                             poster="./assets/img/thumbnail-video.svg"
                             src="./assets/videos/inter-video.mp4"
-                            class="inter__media--video"
+                            class="inter__media--video hide-on-mobile"
+                        ></video>
+                        <video
+                            muted
+                            poster="./assets/img/inter-thumbnail-mobile.svg"
+                            src="./assets/videos/inter-video.mp4"
+                            class="inter__media--video hide-on-pc"
                         ></video>
                         <div class="inter__media--play">
                             <img src="./assets/icons/play-video.svg" alt="" />
@@ -758,12 +811,22 @@
                     <img
                         src="./assets/img/inter__decorate-bottom-1.svg"
                         alt=""
-                        class="inter__decor"
+                        class="inter__decor hide-on-mobile"
                     />
                     <img
                         src="./assets/img/inter__decorate-bottom-2.svg"
                         alt=""
-                        class="inter__decor"
+                        class="inter__decor hide-on-mobile"
+                    />
+                    <img
+                        src="./assets/img/inter-decor-bottom-mobile-1.svg"
+                        alt=""
+                        class="inter__decor hide-on-pc"
+                    />
+                    <img
+                        src="./assets/img/inter-decor-bottom-mobile-2.svg"
+                        alt=""
+                        class="inter__decor hide-on-pc"
                     />
                 </div>
             </section>
@@ -948,8 +1011,8 @@
                             @interaction_arif
                         </a>
                     </section>
-                    <div class="row">
-                        <div class="col-lg-4">
+                    <div class="row blog__list--mobile">
+                        <div class="col-lg-4 col-12">
                             <figure class="blog-item">
                                 <img
                                     src="./assets/img/blog-item-img-01.jpg"
@@ -958,7 +1021,7 @@
                                 />
                             </figure>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-12">
                             <figure class="blog-item">
                                 <img
                                     src="./assets/img/blog-item-img-02.jpg"
@@ -967,7 +1030,7 @@
                                 />
                             </figure>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-12">
                             <figure class="blog-item">
                                 <img
                                     src="./assets/img/blog-item-img-03.jpg"
@@ -976,6 +1039,16 @@
                                 />
                             </figure>
                         </div>
+                    </div>
+                    <!-- Controls -->
+                    <div class="inter__bottom--dots hide-on-pc blog__dots">
+                        <div class="inter__bottom--dot"></div>
+                        <div class="inter__bottom--dot"></div>
+                        <div
+                            class="inter__bottom--dot inter__bottom--dot-active"
+                        ></div>
+                        <div class="inter__bottom--dot"></div>
+                        <div class="inter__bottom--dot"></div>
                     </div>
                 </div>
             </section>
@@ -1001,17 +1074,22 @@
                             <img
                                 src="./assets/img/banner-decor-01.svg"
                                 alt=""
-                                class="banner__decor"
+                                class="banner__decor hide-on-mobile"
                             />
                             <img
                                 src="./assets/img/banner-decor-02.svg"
                                 alt=""
-                                class="banner__decor"
+                                class="banner__decor hide-on-mobile"
                             />
                             <img
                                 src="./assets/img/banner-decor-03.svg"
                                 alt=""
-                                class="banner__decor"
+                                class="banner__decor hide-on-mobile"
+                            />
+                            <img
+                                src="./assets/img/banner-decor-mobile.svg"
+                                alt=""
+                                class="banner__decor hide-on-pc"
                             />
                         </div>
                     </section>
@@ -1019,7 +1097,7 @@
             </section>
         </main>
         <!-- Footer -->
-        <footer class="footer">
+        <footer class="footer hide-on-mobile">
             <div class="header__container footer__container">
                 <div class="header__inner">
                     <div class="header__contact">
@@ -1070,6 +1148,44 @@
                     <p class="footer__copyright-text">Privacy Policy</p>
                     <p class="footer__copyright-text">Terms of Conditions</p>
                 </div>
+            </div>
+        </footer>
+        <!-- Mobile footer -->
+        <footer class="footer-mobile hide-on-pc">
+            <div class="container">
+                <div class="footer-mobile__inner">
+                    <img
+                        src="./assets/img/logo.svg"
+                        alt=""
+                        class="footer-mobile__logo"
+                    />
+                    <div class="footer-mobile__list">
+                        <p class="footer-mobile__text">Projects</p>
+                        <p class="footer-mobile__text">Journey</p>
+                        <p class="footer-mobile__text">Service</p>
+                        <p class="footer-mobile__text">Contact</p>
+                    </div>
+                    <div class="footer-mobile__contact">
+                        <figure class="footer-mobile__circle">
+                            <img
+                                src="./assets/icons/letter-mobile-bottom.svg"
+                                alt=""
+                            />
+                        </figure>
+                        <p class="footer-mobile__more">hi@arif.interactive</p>
+                    </div>
+                    <div class="footer-mobile__service">
+                        <p class="footer-mobile__service--text">
+                            Privacy Policy
+                        </p>
+                        <p class="footer-mobile__service--text">
+                            Terms of Conditions
+                        </p>
+                    </div>
+                </div>
+                <p class="footer-mobile__copyright">
+                    ©interactiveArif 2021. All rights reserved.
+                </p>
             </div>
         </footer>
     </body>

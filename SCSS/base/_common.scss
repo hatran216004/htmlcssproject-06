@@ -40,13 +40,13 @@ a {
     outline: none;
     padding: 0;
     background-color: transparent;
+    text-align: center;
     min-width: 170px;
     height: var(--height);
     line-height: var(--height);
     background-color: variables.$primary-color;
     font-size: 1.8rem;
     font-weight: 700;
-    line-height: 3rem;
     transition: opacity 0.3s;
 
     &:hover {

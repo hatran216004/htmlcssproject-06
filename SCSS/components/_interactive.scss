@@ -1,7 +1,8 @@
 @use "../base";
 
 .inter {
-    padding: 140px 0 74px;
+    margin-top: 100px;
+    padding: 40px 0 74px;
     background: linear-gradient(to bottom, #fff 47%, #fbfaff 42%);
     position: relative;
     &__container {
@@ -81,14 +82,9 @@
             }
         }
         &--intro {
-            width: 170px;
-            height: 62px;
-            text-align: center;
+            @extend %btn;
             background: #fff;
             color: #51586a;
-            font-size: 1.8rem;
-            font-weight: 700;
-            line-height: 62px;
             text-transform: uppercase;
             position: absolute;
             @include base.pos-bottom-right(10px, 10px);
