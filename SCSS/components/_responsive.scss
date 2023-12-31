@@ -62,8 +62,9 @@
 }
 
 .header {
-    @include base.screen(tablet-mobile) {
+    @include base.screen(mobile) {
         &__container {
+            width: 100%;
             max-width: calc(100% - 40px);
         }
         &__inner {
@@ -90,7 +91,7 @@
 
 .hero {
     padding-top: 50px;
-    @include base.screen(tablet-mobile) {
+    @include base.screen(mobile) {
         &::after {
             content: "";
         }
@@ -177,7 +178,7 @@
 .socials {
     margin-top: 100px;
     padding: 20px 0;
-    @include base.screen(tablet-mobile) {
+    @include base.screen(mobile) {
         &__container {
             padding: 0 15px;
         }
@@ -200,15 +201,12 @@
                 translate: -50% 0;
             }
         }
-        &__list {
+        &__list-mobile {
             margin-top: 42px;
+            display: grid;
             grid-template-columns: repeat(2, auto);
-        }
-    }
-    @include base.screen(mobile-s) {
-        &__list {
-            margin-top: 42px;
-            grid-template-columns: repeat(1, auto);
+            justify-content: space-between;
+            row-gap: 36px;
         }
     }
 }
@@ -216,7 +214,7 @@
 .features {
     margin-top: 80px;
     padding: 20px 0;
-    @include base.screen(tablet-mobile) {
+    @include base.screen(mobile) {
         &__container {
             padding: 0 15px;
         }
@@ -270,7 +268,7 @@
 .project {
     margin-top: 100px;
     padding: 69px 0;
-    @include base.screen(tablet-mobile) {
+    @include base.screen(mobile) {
         &__container {
             padding: 0 15px;
         }
@@ -339,7 +337,7 @@
 
 .inter {
     padding: 20px 0 67px;
-    @include base.screen(tablet-mobile) {
+    @include base.screen(mobile) {
         &__container {
             padding: 0 15px;
         }
@@ -446,7 +444,7 @@
 .question {
     margin-top: 100px;
     padding: 20px 0;
-    @include base.screen(tablet-mobile) {
+    @include base.screen(mobile) {
         &__container {
             padding: 0 15px;
         }
@@ -503,7 +501,7 @@
 .blog {
     margin-top: 20px;
     padding: 20px 0;
-    @include base.screen(tablet-mobile) {
+    @include base.screen(mobile) {
         &__container {
             padding: 0 15px;
         }
@@ -541,8 +539,9 @@
 
 .banner {
     margin-top: 100px;
-    @include base.screen(tablet-mobile) {
+    @include base.screen(mobile) {
         &__container {
+            width: 100%;
             max-width: 100%;
         }
         &__inner {

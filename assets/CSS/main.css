@@ -1917,8 +1917,9 @@ a {
   transform: translateX(0);
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .header__container {
+    width: 100%;
     max-width: calc(100% - 40px);
   }
   .header__inner {
@@ -1946,7 +1947,7 @@ a {
 .hero {
   padding-top: 50px;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .hero::after {
     content: "";
   }
@@ -2024,7 +2025,7 @@ a {
   margin-top: 100px;
   padding: 20px 0;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .socials__container {
     padding: 0 15px;
   }
@@ -2046,15 +2047,12 @@ a {
     left: 50%;
     translate: -50% 0;
   }
-  .socials__list {
+  .socials__list-mobile {
     margin-top: 42px;
+    display: grid;
     grid-template-columns: repeat(2, auto);
-  }
-}
-@media (max-width: 575.98px) {
-  .socials__list {
-    margin-top: 42px;
-    grid-template-columns: repeat(1, auto);
+    justify-content: space-between;
+    row-gap: 36px;
   }
 }
 
@@ -2062,7 +2060,7 @@ a {
   margin-top: 80px;
   padding: 20px 0;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .features__container {
     padding: 0 15px;
   }
@@ -2116,7 +2114,7 @@ a {
   margin-top: 100px;
   padding: 69px 0;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .project__container {
     padding: 0 15px;
   }
@@ -2183,7 +2181,7 @@ a {
 .inter {
   padding: 20px 0 67px;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .inter__container {
     padding: 0 15px;
   }
@@ -2282,7 +2280,7 @@ a {
   margin-top: 100px;
   padding: 20px 0;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .question__container {
     padding: 0 15px;
   }
@@ -2335,7 +2333,7 @@ a {
   margin-top: 20px;
   padding: 20px 0;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .blog__container {
     padding: 0 15px;
   }
@@ -2371,8 +2369,9 @@ a {
 .banner {
   margin-top: 100px;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .banner__container {
+    width: 100%;
     max-width: 100%;
   }
   .banner__inner {
