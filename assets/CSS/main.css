@@ -2404,6 +2404,7 @@ a {
     line-height: 3rem;
   }
   .banner__decor:nth-child(4) {
+    width: 100%;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
