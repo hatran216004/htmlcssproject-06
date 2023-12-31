@@ -395,6 +395,9 @@
             }
         }
         &__bottom {
+            &--list {
+                margin-top: 40px;
+            }
             &--item {
                 animation: none;
             }

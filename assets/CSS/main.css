@@ -2231,6 +2231,9 @@ a {
     font-size: 1.6rem;
     line-height: 2.2rem;
   }
+  .inter__bottom--list {
+    margin-top: 40px;
+  }
   .inter__bottom--item {
     animation: none;
   }
