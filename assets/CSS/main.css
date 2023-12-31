@@ -1909,6 +1909,9 @@ a {
 .menu-drawer .navbar__item--link:nth-child(1) {
   padding: 0 20px;
 }
+.menu-drawer .navbar__item--link {
+  display: block;
+}
 .menu-checkbox:checked ~ .menu-overlay {
   opacity: 1;
   visibility: visible;
@@ -2053,6 +2056,9 @@ a {
     grid-template-columns: repeat(2, auto);
     justify-content: space-between;
     row-gap: 36px;
+  }
+  .socials__list--item:nth-child(6), .socials__list--item:nth-child(8) {
+    margin-left: 36px;
   }
 }
 
@@ -2432,6 +2438,9 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: 2rem;
+}
+.footer-mobile__text:hover {
+  text-decoration: underline;
 }
 .footer-mobile__contact {
   margin-top: 58px;

@@ -47,6 +47,9 @@
                 &--link:nth-child(1) {
                     padding: 0 20px;
                 }
+                &--link {
+                    display: block;
+                }
             }
         }
     }
@@ -207,6 +210,12 @@
             grid-template-columns: repeat(2, auto);
             justify-content: space-between;
             row-gap: 36px;
+        }
+        &__list {
+            &--item:nth-child(6),
+            &--item:nth-child(8) {
+                margin-left: 36px;
+            }
         }
     }
 }
@@ -600,6 +609,9 @@
         font-style: normal;
         font-weight: 400;
         line-height: 2rem;
+        &:hover {
+            text-decoration: underline;
+        }
     }
     &__contact {
         margin-top: 58px;
