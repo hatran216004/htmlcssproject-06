@@ -938,7 +938,7 @@ a {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1170px;
+    max-width: 1200px;
   }
   .row-cols-xl-1 > * {
     flex: 0 0 auto;
